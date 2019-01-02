@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "b-clean": "rimraf dist",
-    "b-copy": "cpy './src/public/app/*' '!./src/public/app/*.js' dist",
+    "b-copy": "cpy './src/public/app/' '!./src/public/app/*.js' dist",
     "b-js": "parcel build ./src/public/app/sw.js && parcel build ./src/public/app/app.js",
     "build": "NODE_ENV=production npm run b-clean && npm run b-copy && npm run b-js",
     "install-prod": "npm install && npm install --save @jmaguirrei/belt @jmaguirrei/ui @jmaguirrei/store @jmaguirrei/server",
