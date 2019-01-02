@@ -1,2 +1,0 @@
-# museeker-app
-Museeker App
