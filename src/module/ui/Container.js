@@ -1,1 +1,1 @@
-import { ui } from '/module/context';export default ui.hoc({  render() {    return ui.html`      <div id='page-wrapper'>        Hello! I am the APP      </div>    `;  }});
+import { ui } from '/module/context';import App from './pages/<App>/App';export default ui.hoc({  render() {    return ui.html`      <div id='page-wrapper'>        ${App()}      </div>    `;  }});
