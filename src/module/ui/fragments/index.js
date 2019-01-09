@@ -1,0 +1,1 @@
+import { Menu } from './Menu';export default ui => ({  Menu: Menu(ui),});
