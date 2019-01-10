@@ -14,7 +14,7 @@
     "build": "NODE_ENV=production npm run b1 && npm run b2 && npm run b3 && npm run b4",
 
     "git-i1": "git add .",
-    "git-i2": "git commit -m 'Initial commit'",
+    "git-i2": "git diff-index --quiet HEAD || git commit -m 'Initial commit'",
     "git-i3": "git push",
     "git-initial": "npm run git-i1 && npm run git-i2 && npm run git-i3",
 
