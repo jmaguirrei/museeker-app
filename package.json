@@ -12,7 +12,12 @@
     "b3": "npm run b3a && npm run b3b",
     "b4": "parcel build ./public/sw.js && parcel build ./public/app.js",
     "build": "NODE_ENV=production npm run b1 && npm run b2 && npm run b3 && npm run b4",
-    "git-initial": "git add . && git commit -m 'Initial commit' && git push",
+
+    "git-i1": "git add .",
+    "git-i2": "git commit -m 'Initial commit'",
+    "git-i3": "git push",
+    "git-initial": "npm run git-i1 && npm run git-i2 && npm run git-i3",
+
     "git-pack": "npm run update-jmaguirrei && npm run build && npm run git-initial",
 
     "i1": "npm install --save @jmaguirrei/belt",
