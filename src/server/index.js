@@ -28,7 +28,7 @@ const config = {
   distFolder: path.join(__dirname, '/../../dist'),
   httpPort: HTTP_PORT,
   methods,
-  mongoCollection: 'app',
+  moduleName: 'app',
   mongoURI: MONGO_URI,
   routes,
   socketPort: SOCKET_PORT,
