@@ -1,0 +1,1 @@
+export const routes = {  _root_: props => require('../client/ui/Container').default(props),  app: props => require('../client/ui/pages/<App>/App').default(props),};
