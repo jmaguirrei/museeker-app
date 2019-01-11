@@ -1,8 +1,6 @@
 
 
 // Dependencies
-// import _ from '@jmaguirrei/belt';
-// import fs from 'fs';
 import path from 'path';
 import server from '@jmaguirrei/server';
 import methods from '/server/api/methods';
@@ -15,6 +13,7 @@ const {
   HTTP_PORT,
   SOCKET_PORT,
   BASE_URL,
+  BASE_FOLDER,
   MONGO_URI,
   SENDGRID_API_KEY,
   USE_SERVICE_WORKER,
@@ -23,19 +22,18 @@ const {
 initServices({ SENDGRID_API_KEY });
 
 const config = {
-  baseUrl: BASE_URL,
-  defaultRoute: 'app',
-  distFolder: path.join(__dirname, '/../../dist'),
-  httpPort: HTTP_PORT,
-  methods,
   moduleName: 'app',
-  mongoURI: MONGO_URI,
-  routes,
+  defaultRoute: 'app',
+  baseUrl: BASE_URL,
+  baseFolder: BASE_FOLDER,
   socketPort: SOCKET_PORT,
+  httpPort: HTTP_PORT,
+  mongoURI: MONGO_URI,
   useServiceWorker: USE_SERVICE_WORKER,
+  distFolder: path.join(__dirname, '/../../dist'),
 };
 
-server.init(config)
+server.init({ config, methods, routes })
 .then(() => {
   console.log('Server started, DB running...');
 })
