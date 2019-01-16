@@ -17,6 +17,7 @@ const {
   MONGO_URI,
   SENDGRID_API_KEY,
   USE_SERVICE_WORKER,
+  USE_MANIFEST,
 } = envFile[nodeEnv];
 
 initServices({ SENDGRID_API_KEY });
@@ -30,6 +31,7 @@ const config = {
   httpPort: HTTP_PORT,
   mongoURI: MONGO_URI,
   useServiceWorker: USE_SERVICE_WORKER,
+  useManifest: USE_MANIFEST,
   distFolder: path.join(__dirname, '/../../dist'),
 };
 
