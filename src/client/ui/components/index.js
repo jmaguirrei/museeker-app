@@ -1,1 +1,1 @@
-import { Input } from './Input';export default ui => ({  Input: Input(ui),});
+export { Input } from './Input';

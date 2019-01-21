@@ -1,10 +1,10 @@
 
 
-export const Menu = ui => {
+export const Menu = client => {
 
   const size = 28;
 
-  return ui.hoc({
+  return client.hoc({
 
     state(props, store) {
       return {
@@ -84,7 +84,7 @@ export const Menu = ui => {
 
       const { position, level } = state;
 
-      return ui.html`
+      return client.html`
         <div class=${classes.wrapper} @click=${actions.onClick}>
           <div style=${styles.handle(position, level)}></div>
           <div class=${classes.line} style=${styles.topLine(level)}></div>

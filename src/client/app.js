@@ -1,5 +1,3 @@
+import config from '../config.js';
 
-import app from '/client/context';
-
-app.start();
-
+export default window.jmaguirrei_client.init(config.client);
